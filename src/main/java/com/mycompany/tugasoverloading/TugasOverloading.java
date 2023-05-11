@@ -25,10 +25,23 @@ public class TugasOverloading {
         int skalar = 5;
 
         TugasOverloading overLoading = new TugasOverloading(x, y, skalar);
-
+        
+        System.out.println("Skalar : " + skalar);
+        System.out.print("Vektor X : { ");
+        for(int i = 0; i < x.length; i++){
+            System.out.print(x[i] + " ");
+        }
+        System.out.println("}");
+        
+        System.out.print("Vektor Y : { ");
+        for(int i = 0; i < y.length; i++){
+            System.out.print(y[i] + " ");
+        }
+        System.out.println("}\n");
+        
         int hasilVectorSkalar = overLoading.vectorSkalar();
         System.out.println("Hasil vektor X dikali dengan Skalar " + skalar + " adalah : " + hasilVectorSkalar);
-
+        
         int hasilVectorVector = overLoading.vectorVector();
         System.out.println("Hasil vektor X dikali dengan vektor Y adalah : " + hasilVectorVector);
     }
