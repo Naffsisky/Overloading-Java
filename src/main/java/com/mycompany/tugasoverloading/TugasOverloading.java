@@ -9,9 +9,9 @@ package com.mycompany.tugasoverloading;
  * @author naffsisky
  */
 public class TugasOverloading {
-    private int[] x;
-    private int[] y;
-    private int skalar;
+    public int[] x;
+    public int[] y;
+    public int skalar;
     
     public TugasOverloading(int[] x, int[] y, int skalar) {
         this.x = x;
@@ -24,12 +24,12 @@ public class TugasOverloading {
         int[] y = {4, 5, 6};
         int skalar = 5;
 
-        TugasOverloading obj = new TugasOverloading(x, y, skalar);
+        TugasOverloading overLoading = new TugasOverloading(x, y, skalar);
 
-        int hasilVectorSkalar = obj.vectorSkalar();
+        int hasilVectorSkalar = overLoading.vectorSkalar();
         System.out.println("Hasil vektor X dikali dengan Skalar " + skalar + " adalah : " + hasilVectorSkalar);
 
-        int hasilVectorVector = obj.vectorVector();
+        int hasilVectorVector = overLoading.vectorVector();
         System.out.println("Hasil vektor X dikali dengan vektor Y adalah : " + hasilVectorVector);
     }
 
