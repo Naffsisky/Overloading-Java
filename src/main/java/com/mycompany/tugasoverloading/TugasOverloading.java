@@ -9,78 +9,16 @@ package com.mycompany.tugasoverloading;
  * @author naffsisky
  */
 public class TugasOverloading {
-    public int[] x;
-    public int[] y;
-    public int skalar;
-    
-    public TugasOverloading(int[] x, int[] y, int skalar) {
-        this.x = x;
-        this.y = y;
-        this.skalar = skalar;
-    }
 
     public static void main(String[] args) {
-        int[] x = {1, 2, 3};
-        int[] y = {4, 5, 6};
-        int skalar = 5;
+    Vector3 X = new Vector3(1, 2, 3);
+    Vector3 Y = new Vector3(4, 5, 6);
+    
+    int[] hasilVectorSkalar = X.perhitungan(5);
+    System.out.println("Hasil vektor X dikali dengan Skalar : [" + hasilVectorSkalar[0] + " " + hasilVectorSkalar[1] + " " + hasilVectorSkalar[2] + "]");
+    
+    int hasilVectorVector = X.perhitungan(Y.vectorX);
+    System.out.println("Hasil vektor X dikali dengan vektor Y adalah : " + hasilVectorVector);
+}
 
-        TugasOverloading overLoading = new TugasOverloading(x, y, skalar);
-        
-        System.out.println("Skalar : " + skalar);
-        System.out.print("Vektor X : { ");
-        for(int i = 0; i < x.length; i++){
-            System.out.print(x[i] + " ");
-        }
-        System.out.println("}");
-        
-        System.out.print("Vektor Y : { ");
-        for(int i = 0; i < y.length; i++){
-            System.out.print(y[i] + " ");
-        }
-        System.out.println("}\n");
-        
-        int hasilVectorSkalar = overLoading.vectorSkalar();
-        System.out.println("Hasil vektor X dikali dengan Skalar " + skalar + " adalah : " + hasilVectorSkalar);
-        
-        int hasilVectorVector = overLoading.vectorVector();
-        System.out.println("Hasil vektor X dikali dengan vektor Y adalah : " + hasilVectorVector);
-    }
-
-    public int vectorSkalar() {
-        int hasil = 0;
-        int j = x.length - 1;
-        int z = 0;
-
-        for (int i = 0; i < x.length; i++) {
-            hasil += x[i] * skalar;
-            z += x[i] * skalar;
-            System.out.print(x[i] + "*" + skalar);
-            if (i != j) {
-                System.out.print(" + ");
-            }
-            if (i == j) {
-                System.out.println(" = " + z);
-            }
-        }
-        return hasil;
-    }
-
-    public int vectorVector() {
-        int hasil = 0;
-        int j = x.length - 1;
-        int z = 0;
-
-        for (int i = 0; i < x.length; i++) {
-            hasil += x[i] * y[i];
-            z += x[i] * y[i];
-            System.out.print(x[i] + "*" + y[i]);
-            if (i != j) {
-                System.out.print(" + ");
-            }
-            if (i == j) {
-                System.out.println(" = " + z);
-            }
-        }
-        return hasil;
-    }
 }
