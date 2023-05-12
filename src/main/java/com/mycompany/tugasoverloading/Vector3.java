@@ -16,18 +16,30 @@ public class Vector3 {
     }
     
     public int[] perhitungan(int skalar){
-     int[] hasil = new int[3];
-     for (int i = 0; i < vectorX.length; i++){
-         hasil[i] = vectorX[i] * skalar;
-     }
-     return hasil;
+        int[] hasil = new int[3];
+        System.out.println("Skalar : " + skalar);
+        System.out.print("Vektor X : [ ");
+        for (int i = 0; i < vectorX.length; i++){
+            hasil[i] = vectorX[i] * skalar;
+            System.out.print(vectorX[i] + " ");
+        }
+        System.out.println("]");
+        return hasil;
     }
     
     public int perhitungan(int[] vectorY){
-     int hasil = 0;
-     for (int i = 0; i < vectorX.length; i++){
-         hasil += vectorX[i] * vectorY[i];
-     }
-     return hasil;
+        System.out.print("\nVektor X : [ ");
+        int hasil = 0;
+        for (int i = 0; i < vectorX.length; i++){
+            hasil += vectorX[i] * vectorY[i];
+            System.out.print(vectorX[i] + " ");
+        }
+        System.out.println("]");
+        System.out.print("Vektor Y : [ ");
+        for (int i = 0; i < vectorX.length; i++){
+            System.out.print(vectorY[i] + " ");
+        }
+        System.out.println("]");
+        return hasil;
     }
 }

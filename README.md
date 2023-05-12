@@ -15,6 +15,12 @@ Hasil vektor X dikali dengan vektor Y adalah : 32
 
 ### V3
 ```
-Hasil vektor X dikali dengan Skalar : [5 10 15]
+Skalar : 5
+Vektor X : [ 1 2 3 ]
+
+Hasil vektor X dikali dengan Skalar : [5 10 15] Total 30
+
+Vektor X : [ 1 2 3 ]
+Vektor Y : [ 4 5 6 ]
 Hasil vektor X dikali dengan vektor Y adalah : 32
 ```

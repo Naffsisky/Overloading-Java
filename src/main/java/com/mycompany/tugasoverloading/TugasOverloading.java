@@ -15,7 +15,8 @@ public class TugasOverloading {
     Vector3 Y = new Vector3(4, 5, 6);
     
     int[] hasilVectorSkalar = X.perhitungan(5);
-    System.out.println("Hasil vektor X dikali dengan Skalar : [" + hasilVectorSkalar[0] + " " + hasilVectorSkalar[1] + " " + hasilVectorSkalar[2] + "]");
+    int jumlah = hasilVectorSkalar[0] + hasilVectorSkalar[1] + hasilVectorSkalar[2];
+    System.out.println("\nHasil vektor X dikali dengan Skalar : [" + hasilVectorSkalar[0] + " " + hasilVectorSkalar[1] + " " + hasilVectorSkalar[2] + "] Total " + jumlah);
     
     int hasilVectorVector = X.perhitungan(Y.vectorX);
     System.out.println("Hasil vektor X dikali dengan vektor Y adalah : " + hasilVectorVector);
